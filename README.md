@@ -15,3 +15,56 @@ for data storage and aggregated analysis.
 - Data ingestion using Kaggle API
 - Data upload to SQL Server
 - Aggregated analysis using SQL (mean, median, mode)
+┌──────────────────────────────┐
+│          Kaggle Dataset       │
+│  (Gaming Hours vs Performance)│
+└──────────────┬───────────────┘
+               │
+               │ Kaggle API / CSV Download
+               ▼
+┌──────────────────────────────┐
+│        Python Environment     │
+│                              │
+│  ┌────────────────────────┐  │
+│  │ Data Cleaning Module   │  │
+│  │ - Remove duplicates    │  │
+│  │ - Handle missing data  │  │
+│  │ - Rename columns       │  │
+│  │ - Data validation      │  │
+│  └────────────────────────┘  │
+│                              │
+│  ┌────────────────────────┐  │
+│  │ Database Connection    │  │
+│  │ - pyodbc               │  │
+│  │ - SQL Server connector │  │
+│  └────────────────────────┘  │
+└──────────────┬───────────────┘
+               │
+               │ Insert Full Dataset
+               ▼
+┌──────────────────────────────┐
+│        SQL Server Database    │
+│        (GamingProject)        │
+│                              │
+│  ┌────────────────────────┐  │
+│  │ gaming_performance     │  │
+│  │ (Full Cleaned Data)    │  │
+│  └────────────────────────┘  │
+│                              │
+│  ┌────────────────────────┐  │
+│  │ SQL Analysis Layer     │  │
+│  │ - Mean (AVG)           │  │
+│  │ - Median               │  │
+│  │ - Mode                 │  │
+│  │ - Group By Analysis    │  │
+│  └────────────────────────┘  │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│        Analytical Insights    │
+│  - Gaming vs Performance     │
+│  - Stress & Productivity     │
+│  - Sleep Impact              │
+│  - Optimal Gaming Patterns   │
+└──────────────────────────────┘
